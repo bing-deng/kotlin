@@ -6,11 +6,11 @@ import java.lang.NumberFormatException
 
 fun main(argv:Array<String>){
 
-    val num = readLine()
+    val num = "3"
     try{
-         println(Integer.parseInt(num))
-    }catch (e: NumberFormatException){
-        println("exception")
+        Integer.parseInt(num)
+    }catch(e:NumberFormatException){
+
     }finally {
 
     }

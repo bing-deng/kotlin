@@ -49,6 +49,20 @@ class ContactListFilters{
 }
 
 
+fun lookForAlice(people:List<Person>){
+    // 任意定义一个标签名字
+    people.forEach stop@{
+        if(it.firstName == "Alice") return@stop
+        println("Alice is missing")
+    }
+
+    // 使用lambda作为参数的函数的名字可以作为标签
+    people.forEach{
+        if(it.firstName == "Alice") return@forEach
+        print("Alice missing")
+     }
+
+}
 
 
 fun main(argv:Array<String>){
@@ -79,4 +93,7 @@ fun main(argv:Array<String>){
 //    println(contacts.filter { it.firstName.startsWith("sv") && it.phoneNumber !=null })
     println(contacts.filter (contactListFilters.getPredicate() ) )
 
+    var find = listOf(Person("Alice","",""))
+
+    println(lookForAlice(find))
 }

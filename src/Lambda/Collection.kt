@@ -80,6 +80,25 @@ fun sequnence(){
     println(people.asSequence().map( Person::name ).filter{it.startsWith("A")}.toList())
 }
 
+// 带接受者的lambda :with 和 apply
+fun alphabert():String{
+    val stringBuilder = StringBuilder()
+    return with(stringBuilder){
+        for (letter in 'A'..'Z'){
+            append(letter)
+        }
+        toString()
+    }
+
+}
+
+// 类似扩展方法 ，任何类都可以加apply
+fun alphabertApply() = StringBuilder().apply(){
+    for(letter in 'A'..'Z'){
+        append(letter)
+    }
+}.toString()
+
 fun main(argv:Array<String>){
 //    filter()
 //    map()

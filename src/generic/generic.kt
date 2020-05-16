@@ -2,6 +2,10 @@ package generic
 
 import java.lang.Appendable
 
+class Box<T>(t: T) {
+    var value = t
+}
+
 fun callGeneric(){
     val letters = ('a'..'z').toList()
     println(letters.slice<Char>(0..2))
@@ -38,6 +42,8 @@ fun<T> ensureTRailingPeriod(seq:T)
 
 fun main(argv:Array<String>){
 
+    val box = Box(1)
+    println(box.value)
     callHiger()
 //println(listOf(1,2,3).sum())
     println(oneHalf(3))

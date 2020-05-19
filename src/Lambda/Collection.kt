@@ -100,13 +100,6 @@ fun alphabertApply() = StringBuilder().apply(){
 }.toString()
 
 fun main(argv:Array<String>){
-//    filter()
-//    map()
-//    dict()
-//    aacf()
-//    groupBy()
-//    groupBy2()
-//    fmfa()
-    sequnence()
+    println(alphabertApply())
 }
 
